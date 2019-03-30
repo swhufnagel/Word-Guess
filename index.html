@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <title>Hangman</title>
 </head>
 <body>
     <div class="container"> 
         <div class="row">
             <div class="col-md-12 head">
-                <h1>Hangman</h1>
+                <img src="assets/images/TMNT-Classic-Title.jpg" class="mx-auto d-block img-border mainimg">
             </div>
         </div>
-        <div class="container game-container">
-            <div class="row">
+        <div class="container game-container mt-3 fancy-border mb-3 p-2">
+            <div class="row mt-3 mb-3">
                 <div class="col-md-6">
-                    hangman guy
+                    <canvas id="stickman"></canvas>
+                    <div id="images" class="mx-auto my-auto">
+                        <img id="theimg" src="assets/images/teenage-mutant-ninja-turtles-tmnt-logo-cartoon-background-tablet.png">
+
+                    </div>
                 </div>
+
                 <div class="col-md-6">
-                    scoreboard and letters
+                    <p class="heads">Ninja Turtles Hangman!</p>
                     <div id="currentWord">
                         <p id="theWord"> </p>
                     </div>
-                    <div>
+                    <div class="scoreboard">
+                        <p id="startGame" class=""></p>
+                        <p id="restart"></p>
+                        <br>
                         <p id="wins"></p>
                         <p id="losses"></p>
                         <p id="guessed"></p>

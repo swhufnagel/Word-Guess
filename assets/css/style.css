@@ -1,0 +1,75 @@
+body{
+    background-color: greenyellow;
+    color: purple;
+}
+.fancy-border {
+    text-align:center;
+    border: 5px solid purple;
+    background-color: black;
+  }
+  .img-border{
+    text-align:center;
+    border: 5px dashed;
+    border-image:  linear-gradient(to right, purple 25%, blue 25%, blue 50%,red 50%, red 75%, orange 75%) 5;
+  }
+  .heads{
+      font-size: 40px;
+      color: yellowgreen;
+      font-weight: 200;
+      text-shadow: 7px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;
+      
+  }
+  canvas{
+    color:greenyellow;
+    border: greenyellow solid 5px;
+    padding:15px;
+    height:200px;
+    width:340px;
+    box-shadow: 2px 2px purple;
+  }
+  @font-face { font-family: JuneBug; src: url('Turtles.otf'); } 
+      body {
+         font-family: JuneBug;
+      }
+      #startGame{
+          font-size: 24px;
+      }
+  .scoreboard{
+      font-size: 19px;
+      text-shadow: 1px 0 yellowgreen, 0 1px yellowgreen, 1px 0 yellowgreen, 0 -1px yellowgreen;
+  }
+  .playAgain{
+    background-color: purple;;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+    font-size: 18px;
+  }
+  .playAgain:hover { 
+    background-color: yellowgreen;
+    color: purple;
+  }
+  #images{
+      height:200px;
+      width:340px;
+    border: greenyellow solid 5px;
+    background: url("../images/teenage-mutant-ninja-turtles-tmnt-logo-cartoon-background-tablet.png");
+    text-align: center;
+    display: inline-block;
+  }
+
+  #theimg{
+      height:190px;
+      width:330px;
+      display: inline-block;
+      }
+  
+  #theWord{
+      font-size:19px;
+  }
+  .game-container{
+      width:800px;
+  }
+.mainimg{
+    width:auto;
+    height: 200px;
+}
