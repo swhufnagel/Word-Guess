@@ -48,21 +48,6 @@ var scoreboard = {
 
     }
 };
-document.getElementById("restart").addEventListener("click", function(){
-    scoreboard.guessed = [];
-        scoreboard.guessesLeft = 10;
-        scoreboard.randomize();
-        scoreboard.lettersLeft = words.word.length;
-        document.getElementById("wins").innerHTML = "Wins: " + scoreboard.wins;
-        document.getElementById("losses").innerHTML = "Losses: " + scoreboard.losses;
-        document.getElementById("guessed").innerHTML = "Guessed: " + scoreboard.guessed.join(" ");
-        document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + scoreboard.guessesLeft;
-        document.getElementById("startGame").innerHTML = ("<button class='playAgain'>Play again</button");
-        document.getElementById("images").innerHTML = (" ");
-        document.getElementById("theWord").innerHTML = words.blankList.join(" ");
-        document.getElementById("startGame").innerHTML = ("");
-        context.clearRect(0, 0, 400, 400);
-})
 var images = ["img0.jpg", "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.png", "img6.png", "img7.jpg", "img8.jpg", "img9.png", "img10.jpg", "img11.jpg"];
 
 // Animate man
@@ -178,7 +163,25 @@ document.onkeyup = function (event) {
         }
     }
     if(alphabet.indexOf(scoreboard.playerChoice) > -1){
-    document.getElementById("restart").innerHTML= "<button class='playAgain'>Restart</button>";
+    // document.getElementById("restart").innerHTML= "<button class='playAgain'>Restart</button>";
+    document.getElementById("theimg").addEventListener("click", function(){
+        
+    // })
+    // document.getElementById("restart").addEventListener("click", function(){
+        scoreboard.guessed = [];
+            scoreboard.guessesLeft = 10;
+            scoreboard.randomize();
+            scoreboard.lettersLeft = words.word.length;
+            document.getElementById("wins").innerHTML = "Wins: " + scoreboard.wins;
+            document.getElementById("losses").innerHTML = "Losses: " + scoreboard.losses;
+            document.getElementById("guessed").innerHTML = "Guessed: " + scoreboard.guessed.join(" ");
+            document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + scoreboard.guessesLeft;
+            document.getElementById("startGame").innerHTML = ("<button class='playAgain'>Play again</button");
+            document.getElementById("images").innerHTML = (" ");
+            document.getElementById("theWord").innerHTML = words.blankList.join(" ");
+            document.getElementById("startGame").innerHTML = ("");
+            context.clearRect(0, 0, 400, 400);
+    })
     }
     
     //show scoreboard if player presses a letter
