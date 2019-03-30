@@ -32,19 +32,19 @@ var scoreboard = {
         document.getElementById("losses").innerHTML = "Losses: " + scoreboard.losses;
         document.getElementById("guessed").innerHTML = "Guessed: " + scoreboard.guessed.join(" ");
         document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + scoreboard.guessesLeft;
-        // document.getElementById("startGame").innerHTML = ("<button class='playAgain'>Play again</button");
+        document.getElementById("startGame").innerHTML = ("<button id='playAgain'>Play again</button");
         document.getElementById("images").innerHTML = (" ");
-        // document.getElementById("playAgain").addEventListener("click", function () {
-        //     scoreboard.randomize();
-        //     scoreboard.lettersLeft = words.word.length;
-        //     document.getElementById("images").innerHTML = ("<img id='theimg' src='assets/images/teenage-mutant-ninja-turtles-tmnt-logo-cartoon-background-tablet.png'>");
-        //     setTimeout(showem, 500)
-        //     function showem() {
-        //         document.getElementById("theWord").innerHTML = words.blankList.join(" ");
-        //         document.getElementById("startGame").innerHTML = ("");
-        //         context.clearRect(0, 0, 400, 400);
-        //     }
-        // })
+        document.getElementById("playAgain").addEventListener("click", function () {
+            scoreboard.randomize();
+            scoreboard.lettersLeft = words.word.length;
+            document.getElementById("images").innerHTML = ("<img id='theimg' src='assets/images/teenage-mutant-ninja-turtles-tmnt-logo-cartoon-background-tablet.png'>");
+            setTimeout(showem, 500)
+            function showem() {
+                document.getElementById("theWord").innerHTML = words.blankList.join(" ");
+                document.getElementById("startGame").innerHTML = ("");
+                context.clearRect(0, 0, 400, 400);
+            }
+        })
 
     }
 };
@@ -162,27 +162,24 @@ document.onkeyup = function (event) {
             
         }
     }
-    if(alphabet.indexOf(scoreboard.playerChoice) > -1){
+    // if(alphabet.indexOf(scoreboard.playerChoice) > -1){
     // document.getElementById("restart").innerHTML= "<button class='playAgain'>Restart</button>";
-    document.getElementById("theimg").addEventListener("click", function(){
         
-    // })
+    // }
     // document.getElementById("restart").addEventListener("click", function(){
-        scoreboard.guessed = [];
-            scoreboard.guessesLeft = 10;
-            scoreboard.randomize();
-            scoreboard.lettersLeft = words.word.length;
-            document.getElementById("wins").innerHTML = "Wins: " + scoreboard.wins;
-            document.getElementById("losses").innerHTML = "Losses: " + scoreboard.losses;
-            document.getElementById("guessed").innerHTML = "Guessed: " + scoreboard.guessed.join(" ");
-            document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + scoreboard.guessesLeft;
-            document.getElementById("startGame").innerHTML = ("<button class='playAgain'>Play again</button");
-            document.getElementById("images").innerHTML = (" ");
-            document.getElementById("theWord").innerHTML = words.blankList.join(" ");
-            document.getElementById("startGame").innerHTML = ("");
-            context.clearRect(0, 0, 400, 400);
-    })
-    }
+    //     scoreboard.guessed = [];
+    //         scoreboard.guessesLeft = 10;
+    //         scoreboard.randomize();
+    //         scoreboard.lettersLeft = words.word.length;
+    //         document.getElementById("wins").innerHTML = "Wins: " + scoreboard.wins;
+    //         document.getElementById("losses").innerHTML = "Losses: " + scoreboard.losses;
+    //         document.getElementById("guessed").innerHTML = "Guessed: " + scoreboard.guessed.join(" ");
+    //         document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + scoreboard.guessesLeft;
+    //         document.getElementById("startGame").innerHTML = ("<button class='playAgain'>Play again</button");
+    //         document.getElementById("theWord").innerHTML = words.blankList.join(" ");
+    //         document.getElementById("startGame").innerHTML = ("");
+    //         context.clearRect(0, 0, 400, 400);
+    // })
     
     //show scoreboard if player presses a letter
     if (scoreboard.show === true && alphabet.indexOf(scoreboard.playerChoice) > -1) {
@@ -209,6 +206,7 @@ document.onkeyup = function (event) {
         scoreboard.reset();
         document.getElementById("images").innerHTML = "<img id='theimg' src='assets/images/" + images[scoreboard.index] + "'>";
     }
+    canvas()
 }
 
 canvas();

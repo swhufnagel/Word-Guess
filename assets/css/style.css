@@ -38,13 +38,13 @@ body{
       font-size: 19px;
       text-shadow: 1px 0 yellowgreen, 0 1px yellowgreen, 1px 0 yellowgreen, 0 -1px yellowgreen;
   }
-  .playAgain{
+  #playAgain{
     background-color: purple;;
     color: yellowgreen;
     border: 1px solid yellowgreen;
     font-size: 18px;
   }
-  .playAgain:hover { 
+  #playAgain:hover { 
     background-color: yellowgreen;
     color: purple;
   }
